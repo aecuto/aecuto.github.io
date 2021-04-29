@@ -13,7 +13,7 @@ const ProfessionalSkills = () => {
           <LevelSkill name="NodeJs" level={3} />
           <LevelSkill name="NestJs" level={2} />
           <LevelSkill name="ReactJs" level={3} />
-          <LevelSkill name="Docker" level={2} />
+          <LevelSkill name="Docker" level={1} />
         </Grid>
         <Grid item xs={6}>
           <LevelSkill name="MongoDB" level={2} color="secondary" />

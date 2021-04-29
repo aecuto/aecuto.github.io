@@ -1,7 +1,14 @@
+import { Typography } from "@material-ui/core";
 import Paper from "components/Paper";
 
-const ProfessionalSkills = () => {
-  return <Paper>ProfessionalSkills</Paper>;
+const Contact = () => {
+  return (
+    <Paper>
+      <Typography variant="h5" paragraph>
+        Contact
+      </Typography>
+    </Paper>
+  );
 };
 
-export default ProfessionalSkills;
+export default Contact;
