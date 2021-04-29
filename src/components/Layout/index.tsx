@@ -1,3 +1,4 @@
+import { Container } from "@material-ui/core";
 import { ReactNode } from "react";
 
 type Props = {
@@ -5,7 +6,13 @@ type Props = {
 };
 
 const Layout = ({ children }: Props) => {
-  return <div>{children}</div>;
+  return (
+    <div style={{ backgroundColor: "#fbfbfb" }}>
+      <Container>
+        <div>{children}</div>
+      </Container>
+    </div>
+  );
 };
 
 export default Layout;
