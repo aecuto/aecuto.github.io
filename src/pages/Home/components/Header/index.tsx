@@ -15,6 +15,8 @@ const Paper = styled(MuiPaper)`
     display: flex;
     align-items: center;
     justify-content: center;
+
+    margin-bottom: 20px;
   }
 `;
 

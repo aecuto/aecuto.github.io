@@ -7,7 +7,7 @@ type Props = {
 
 const Layout = ({ children }: Props) => {
   return (
-    <div style={{ backgroundColor: "#fbfbfb" }}>
+    <div>
       <Container>
         <div>{children}</div>
       </Container>
