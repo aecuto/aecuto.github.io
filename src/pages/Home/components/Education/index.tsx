@@ -1,31 +1,25 @@
-import Timeline from "@material-ui/lab/Timeline";
-import TimelineItem from "@material-ui/lab/TimelineItem";
-import TimelineSeparator from "@material-ui/lab/TimelineSeparator";
-import TimelineConnector from "@material-ui/lab/TimelineConnector";
-import TimelineContent from "@material-ui/lab/TimelineContent";
-import TimelineDot from "@material-ui/lab/TimelineDot";
-import TimelineOppositeContent from "@material-ui/lab/TimelineOppositeContent";
 import Typography from "@material-ui/core/Typography";
 import Paper from "components/Paper";
 
-type TimlineDataProps = {
-  content: string;
+import { Timeline, TimelineEvent } from "react-event-timeline";
+
+type TimeLineItemProps = {
   title: string;
+  subtitle: string;
 };
-const TimlineData = ({ title, content }: TimlineDataProps) => {
+const TimelineItem = ({ title, subtitle }: TimeLineItemProps) => {
   return (
-    <TimelineItem>
-      <TimelineOppositeContent>
-        <Typography color="textSecondary">{content}</Typography>
-      </TimelineOppositeContent>
-      <TimelineSeparator>
-        <TimelineDot color="secondary" />
-        <TimelineConnector />
-      </TimelineSeparator>
-      <TimelineContent>
-        <Typography>{title}</Typography>
-      </TimelineContent>
-    </TimelineItem>
+    <TimelineEvent
+      title={<Typography>{title}</Typography>}
+      subtitle={<Typography>{subtitle}</Typography>}
+      bubbleStyle={{
+        borderColor: "transparent",
+        backgroundColor: "#3f51b5",
+        boxShadow:
+          "0px 3px 1px -2px rgb(0 0 0 / 20%), 0px 2px 2px 0px rgb(0 0 0 / 14%), 0px 1px 5px 0px rgb(0 0 0 / 12%)",
+      }}
+      style={{ marginBottom: "20px" }}
+    />
   );
 };
 
@@ -35,14 +29,14 @@ export default function Education() {
       <Typography variant="h5" paragraph>
         Education
       </Typography>
-      <Timeline align="right">
-        <TimlineData
+      <Timeline>
+        <TimelineItem
           title="Threerakarn banhong, lamphun, Thailand"
-          content="Mathematics-Science program (CUMULATIVE GPA: 3.49)"
+          subtitle="Mathematics-Science program (CUMULATIVE GPA: 3.49)"
         />
-        <TimlineData
+        <TimelineItem
           title="Chiang Mai University, Chiang Mai, Thailand"
-          content="Bachelor of Science in Computer Science (Cumulative/Major GPA: 3.09/3.41)"
+          subtitle="Bachelor of Science in Computer Science (Cumulative/Major GPA: 3.09/3.41)"
         />
       </Timeline>
     </Paper>

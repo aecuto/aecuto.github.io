@@ -1,31 +1,25 @@
-import Timeline from "@material-ui/lab/Timeline";
-import TimelineItem from "@material-ui/lab/TimelineItem";
-import TimelineSeparator from "@material-ui/lab/TimelineSeparator";
-import TimelineConnector from "@material-ui/lab/TimelineConnector";
-import TimelineContent from "@material-ui/lab/TimelineContent";
-import TimelineDot from "@material-ui/lab/TimelineDot";
-import TimelineOppositeContent from "@material-ui/lab/TimelineOppositeContent";
 import Typography from "@material-ui/core/Typography";
 import Paper from "components/Paper";
 
-type TimlineDataProps = {
-  content: string;
+import { Timeline, TimelineEvent } from "react-event-timeline";
+
+type TimeLineItemProps = {
   title: string;
+  subtitle: string;
 };
-const TimlineData = ({ title, content }: TimlineDataProps) => {
+const TimelineItem = ({ title, subtitle }: TimeLineItemProps) => {
   return (
-    <TimelineItem>
-      <TimelineOppositeContent>
-        <Typography color="textSecondary">{content}</Typography>
-      </TimelineOppositeContent>
-      <TimelineSeparator>
-        <TimelineDot color="primary" />
-        <TimelineConnector />
-      </TimelineSeparator>
-      <TimelineContent>
-        <Typography>{title}</Typography>
-      </TimelineContent>
-    </TimelineItem>
+    <TimelineEvent
+      title={<Typography>{title}</Typography>}
+      subtitle={<Typography>{subtitle}</Typography>}
+      bubbleStyle={{
+        borderColor: "transparent",
+        backgroundColor: "#f50057",
+        boxShadow:
+          "0px 3px 1px -2px rgb(0 0 0 / 20%), 0px 2px 2px 0px rgb(0 0 0 / 14%), 0px 1px 5px 0px rgb(0 0 0 / 12%)",
+      }}
+      style={{ marginBottom: "20px" }}
+    />
   );
 };
 
@@ -35,18 +29,18 @@ export default function WorkExperience() {
       <Typography variant="h5" paragraph>
         Work Experience
       </Typography>
-      <Timeline align="right">
-        <TimlineData
+      <Timeline>
+        <TimelineItem
           title="Internship Ruby on Rails"
-          content="at Banana Coding (June 2017 – July 2017)"
+          subtitle="at Banana Coding (June 2017 – July 2017)"
         />
-        <TimlineData
+        <TimelineItem
           title="Junior Ruby on Rails"
-          content="at SkillLane (October 8, 2018 - December 2018)"
+          subtitle="at SkillLane (October 8, 2018 - December 2018)"
         />
-        <TimlineData
-          title="Middle NodeJs, ReactJs"
-          content="at 20 Scoops (January 2, 2019 - Present)"
+        <TimelineItem
+          title="Middle NodeJS, ReactJS"
+          subtitle="at 20 Scoops (January 2, 2019 - Present)"
         />
       </Timeline>
     </Paper>
