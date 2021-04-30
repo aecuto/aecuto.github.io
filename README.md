@@ -1,21 +1,12 @@
-# React Typescript Template
+# My Resume
 
-- Routes
-- Auth Manager
-- Basic Structure
-- etc...
+https://kampee-t-resume.web.app/
 
-## How to use template?
+## Tools
 
-`npx degit git@github.com:aecuto/react-typescript-template.git myProject`
+- material-ui
+- react-event-timeline
+- styled-components
+- moment
+- firebase
 
-`cd myProject`
-
-`npm i`
-
-## Available Scripts
-
-- npm start
-- npm test
-- npm run build
-- npm run eject

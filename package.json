@@ -1,6 +1,6 @@
 {
-  "name": "react-ts",
-  "version": "0.1.0",
+  "name": "kampee-t-resume",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
     "start": "react-app-rewired start",
