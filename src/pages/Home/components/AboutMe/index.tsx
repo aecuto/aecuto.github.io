@@ -3,6 +3,8 @@ import Typography from "@material-ui/core/Typography";
 import { Grid } from "@material-ui/core";
 import Icon from "@material-ui/core/Icon";
 import moment from "moment";
+import { useState } from "react";
+import Popover from "@material-ui/core/Popover";
 
 type BioLabelProps = {
   icon: string;
@@ -24,10 +26,22 @@ const BioLabel = ({ icon, label }: BioLabelProps) => {
 };
 
 const AboutMe = () => {
+  const [anchorEl, setAnchorEl] = useState<HTMLButtonElement | null>(null);
+
+  const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
+    setAnchorEl(event.currentTarget);
+  };
+
+  const handleClose = () => {
+    setAnchorEl(null);
+  };
+
+  const open = Boolean(anchorEl);
+
   return (
     <Paper>
       <Grid container spacing={3}>
-        <Grid item xs={6}>
+        <Grid item xs={12} md={6}>
           <Typography variant="h5" paragraph>
             About Me
           </Typography>
@@ -39,33 +53,40 @@ const AboutMe = () => {
             back-end first then front-end. 😁
           </Typography>
         </Grid>
-        <Grid item xs={6}>
+        <Grid item xs={12} md={6}>
           <Typography variant="h5" paragraph>
             Bio
           </Typography>
           <Grid container spacing={1}>
-            <Grid item xs={3}>
+            <Grid item xs={6} md={3}>
               <BioLabel icon="cake" label="Age" />
             </Grid>
-            <Grid item xs={9}>
+            <Grid item xs={6} md={9}>
               <Typography>{moment().diff("1995-05-12", "years")}</Typography>
             </Grid>
-            <Grid item xs={3}>
+            <Grid item xs={6} md={3}>
               <BioLabel icon="email" label="Email" />
             </Grid>
-            <Grid item xs={9}>
-              <Typography>kampee.expertly01@gmail.com</Typography>
+            <Grid item xs={6} md={9}>
+              <Typography noWrap onClick={handleClick}>
+                kampee.expertly01@gmail.com
+              </Typography>
+              <Popover open={open} anchorEl={anchorEl} onClose={handleClose}>
+                <Typography style={{ padding: "20px" }}>
+                  kampee.expertly01@gmail.com
+                </Typography>
+              </Popover>
             </Grid>
-            <Grid item xs={3}>
+            <Grid item xs={6} md={3}>
               <BioLabel icon="phone" label="Phone" />
             </Grid>
-            <Grid item xs={9}>
+            <Grid item xs={6} md={9}>
               <Typography>096 780 9540</Typography>
             </Grid>
-            <Grid item xs={3}>
+            <Grid item xs={6} md={3}>
               <BioLabel icon="home" label="Address" />
             </Grid>
-            <Grid item xs={9}>
+            <Grid item xs={6} md={9}>
               <Typography>
                 104/14 m.2, Tonpao, Sankampang, Chiang Mai, 51030
               </Typography>

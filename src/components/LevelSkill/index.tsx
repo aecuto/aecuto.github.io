@@ -6,6 +6,7 @@ const ProgressText = styled(Typography)`
   color: white;
   top: 0px;
   left: 50%;
+  transform: translate(-50%);
 `;
 
 type Props = {
@@ -15,11 +16,11 @@ type Props = {
 };
 
 const LevelSkill = ({ level = 0, name, color = "primary" }: Props) => {
-  const text = ["NONE", "ADVANCE", "EXPERT", "MASTER"];
-  const value = [0, 70, 80, 90];
+  const text = ["NONE", "INTERMEDIATE", "ADVANCE", "EXPERT", "MASTER"];
+  const value = [0, 65, 70, 80, 90];
   return (
     <div style={{ marginBottom: "20px" }}>
-      <Typography variant="h6">{name}</Typography>
+      <Typography>{name}</Typography>
       <div style={{ position: "relative" }}>
         <LinearProgress
           color={color}

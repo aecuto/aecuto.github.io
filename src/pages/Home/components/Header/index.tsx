@@ -38,7 +38,7 @@ const Header = () => {
           />
         </Grid>
         <Grid item xs={12}>
-          <Typography variant="h3">
+          <Typography variant="h3" align="center">
             <strong>Kampee Tonoi</strong>
           </Typography>
         </Grid>
