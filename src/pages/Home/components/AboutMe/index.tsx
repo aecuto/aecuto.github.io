@@ -50,7 +50,8 @@ const AboutMe = () => {
             am a skilled <strong>back-end</strong> and
             <strong> front-end</strong> developer. I am a quick learner and a
             team worker that gets the job done. Between both I am like to coding
-            back-end first then front-end. 😁
+            back-end first then front-end.😁 Now I am interested in remote
+            working. 😍
           </Typography>
         </Grid>
         <Grid item xs={12} md={6}>
