@@ -39,7 +39,7 @@ export default function WorkExperience() {
           subtitle="at SkillLane (October 8, 2018 - December 2018)"
         />
         <TimelineItem
-          title="Middle NodeJS, ReactJS"
+          title="Early Senior NodeJS, ReactJS"
           subtitle="at 20 Scoops (January 2, 2019 - Present)"
         />
       </Timeline>
