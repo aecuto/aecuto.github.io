@@ -60,10 +60,7 @@ const Header = () => {
           <IconGroup>
             <FacebookIcon
               onClick={() =>
-                window.open(
-                  "https://www.facebook.com/kampee.melon.5/",
-                  "_blank"
-                )
+                window.open("https://www.facebook.com/kampee.aecuto/", "_blank")
               }
             />
             <InstagramIcon
