@@ -1,35 +1,66 @@
 "use client";
 
-import { DeveloperProfile } from "@welovedevs/react-ultimate-resume";
+import "./globals.css";
 
-import data from "./resumeData.json";
+import { Typography } from "@material-tailwind/react";
+import { Skills } from "@/app/components/Skill";
+import { WorkExperience } from "@/app/components/WorkExperience";
+import { Education } from "@/app/components/Education";
+import { About } from "@/app/components/About";
+import { Social } from "@/app/components/Social";
 
 export default function Home() {
   return (
-    <DeveloperProfile
-      mode={"edit"}
-      data={data}
-      // onEdit={onEdit}
-      // onCustomizationChanged={onCustomizationChanged}
-      options={{
-        // locale: 'fr',
-        // side: 'back',
-        // showContactInfos: false,
-        // apiKeys: {
-        //     giphy: process.env.REACT_APP_GIPHY
-        // },
-        endpoints: {
-          devicons:
-            "https://firebasestorage.googleapis.com/v0/b/jechercheundev.appspot.com/o/technologies%2Ftechnologies_list.json?alt=media&token=459028ba-d9bc-4480-a3c4-88633afab7e2",
-        },
-        // maxSkills: 6,
-        // customization,
-        // disableSortableExperience: false,
-        // maxCardsPerRow: 3,
-        // referenceData: {
-        //     professions: ['Developpeur Front-End', 'Développeur Back-End']
-        // }
-      }}
-    />
+    <>
+      <div className="mt-16">
+        <div className="mx-auto max-w-3xl">
+          <div className="hidden print:block">
+            <Typography variant="h4" className="mb-3">
+              print from:{" "}
+              <span className="text-red-400">
+                https://aecuto.github.io/resume/
+              </span>
+            </Typography>
+          </div>
+
+          <Typography variant="h1" className="italic mb-3">
+            About
+          </Typography>
+          <About />
+        </div>
+      </div>
+
+      <div className="mt-16">
+        <div className="mx-auto max-w-3xl">
+          <Typography variant="h1" className="italic">
+            Skills
+          </Typography>
+          <Skills />
+        </div>
+      </div>
+
+      <div className="mt-16">
+        <div className="mx-auto max-w-3xl">
+          <Typography variant="h1" className="italic mb-3">
+            Work Experience
+          </Typography>
+          <WorkExperience />
+        </div>
+      </div>
+      <div className="mt-16">
+        <div className="mx-auto max-w-3xl">
+          <Typography variant="h1" className="italic mb-3">
+            Educations
+          </Typography>
+          <Education />
+        </div>
+      </div>
+
+      <div className="mt-16">
+        <div className="mx-auto max-w-3xl text-center">
+          <Social />
+        </div>
+      </div>
+    </>
   );
 }
