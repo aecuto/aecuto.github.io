@@ -1,4 +1,4 @@
-import { Button, Card, CardBody, Typography } from "@material-tailwind/react";
+import { Card, CardBody, Typography } from "@material-tailwind/react";
 import StackIcon from "tech-stack-icons";
 
 export function Skills() {
@@ -64,29 +64,40 @@ export function Skills() {
   ];
 
   return (
-    <div className="grid gap-4 md:grid-cols-2 grid-cols-1">
-      {data.map(({ label, value }) => (
-        <div key={label}>
-          <Card className="w-96 h-60 bg-white/10">
-            <CardBody>
-              <Typography variant="h5" className="mb-2 text-white">
-                {label}
-              </Typography>
-              {value.map((value) => (
-                <Button
-                  key={value}
-                  variant="outlined"
-                  className="p-0 m-1 text-white border-0"
-                >
-                  <StackIcon name={value} />
-                  <p>{value}</p>
-                </Button>
-              ))}
-            </CardBody>
-          </Card>
-        </div>
-      ))}
-    </div>
+    <>
+      <i className="devicon-portainer-original colored text-[50px]"></i>
+      <i className="devicon-portainer-original colored text-[50px]"></i>
+      <i className="devicon-portainer-original colored text-[50px]"></i>
+
+      <div className="flex flex-wrap gap-4 justify-center">
+        {data.map(({ label, value }) => (
+          <div key={label}>
+            <Card className="w-[360px] h-[360px] bg-white/10">
+              <CardBody>
+                <Typography variant="h5" className="mb-2 text-white">
+                  {label}
+                </Typography>
+
+                <div className="flex flex-wrap">
+                  {value.map((value) => (
+                    <div
+                      key={value}
+                      className="m-1 text-white text-center hover:opacity-50 cursor-pointer"
+                    >
+                      {/* <StackIcon name={value} /> */}
+                      <i
+                        className={`devicon-${value}-original colored text-[50px]`}
+                      ></i>
+                      <p className="text-center">{value}</p>
+                    </div>
+                  ))}
+                </div>
+              </CardBody>
+            </Card>
+          </div>
+        ))}
+      </div>
+    </>
   );
 
   return;
