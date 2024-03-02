@@ -1,5 +1,4 @@
 import { Card, CardBody, Typography } from "@material-tailwind/react";
-import StackIcon from "tech-stack-icons";
 
 export function Skills() {
   const data = [
@@ -7,51 +6,47 @@ export function Skills() {
       label: "Backend",
       value: [
         "nestjs",
+        "express",
         "swagger",
         "json",
-        "serverless",
         "nodejs",
         "mongodb",
         "postgresql",
+        "docker",
+        "yaml",
+        "ssh",
+        "bash",
+        "vim",
         "redis",
       ],
     },
     {
       label: "Frontend",
-      value: [
-        "reactjs",
-        "nextjs2",
-        "css3",
-        "html5",
-        "i18next",
-        "materialui",
-        "tailwindcss",
-      ],
+      value: ["react", "nextjs", "css3", "html5", "materialui", "tailwindcss"],
     },
     {
       label: "DevOps",
       value: [
-        "bash",
-        "vim",
-        "docker",
-        "ec2",
+        "vercel",
         "firebase",
         "linux",
         "ubuntu",
         "cloudflare",
         "azure",
+        "portainer",
+        "nginx",
+        "amazonwebservices",
       ],
     },
     {
       label: "Programing Language",
-      value: ["typescript", "js", "python", "ruby"],
+      value: ["typescript", "javascript", "python", "ruby"],
     },
     {
       label: "Other",
       value: [
         "figma",
         "eslint",
-        "prettier",
         "git",
         "postman",
         "slack",
@@ -59,20 +54,17 @@ export function Skills() {
         "jest",
         "github",
         "markdown",
+        "ohmyzsh",
       ],
     },
   ];
 
   return (
     <>
-      <i className="devicon-portainer-original colored text-[50px]"></i>
-      <i className="devicon-portainer-original colored text-[50px]"></i>
-      <i className="devicon-portainer-original colored text-[50px]"></i>
-
       <div className="flex flex-wrap gap-4 justify-center">
         {data.map(({ label, value }) => (
           <div key={label}>
-            <Card className="w-[360px] h-[360px] bg-white/10">
+            <Card className="w-[360px] h-[360px] bg-white/20">
               <CardBody>
                 <Typography variant="h5" className="mb-2 text-white">
                   {label}
@@ -82,11 +74,11 @@ export function Skills() {
                   {value.map((value) => (
                     <div
                       key={value}
-                      className="m-1 text-white text-center hover:opacity-50 cursor-pointer"
+                      className="m-1 text-white text-center cursor-pointer"
                     >
                       {/* <StackIcon name={value} /> */}
                       <i
-                        className={`devicon-${value}-original colored text-[50px]`}
+                        className={`devicon-${value}-original devicon-${value}-plain colored text-[50px] hover:text-black`}
                       ></i>
                       <p className="text-center">{value}</p>
                     </div>
