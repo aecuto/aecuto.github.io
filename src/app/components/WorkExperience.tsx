@@ -7,7 +7,6 @@ import {
   TimelineBody,
   Typography,
 } from "@material-tailwind/react";
-import moment from "moment";
 
 export function WorkExperience() {
   return (
@@ -24,6 +23,41 @@ export function WorkExperience() {
           <Typography variant="paragraph" className="font-thin opacity-80">
             at 20Scoops (January 2, 2019 - Present)
           </Typography>
+
+          <ul className="list-inside list-disc leading-relaxed">
+            <li>
+              Integrate with Microsoft Graph APIs to fetch outlook email data by
+              using AI to Read PDFs then get important data and store in
+              database
+            </li>
+            <li>
+              Setup microservices with nestjs which are User Management Service
+              and another Service, that communicate by Message Broker using
+              NATs. Deployed with docker build through github action and push
+              docker image to AWS which publish in-use ports, Finally using
+              portainer to handle docker swarm
+            </li>
+            <li>
+              Integrate stripe and adyen payments gateway to settle product in
+              store page
+            </li>
+            <li>
+              Concurent Testing before festival event (for multiple transaction)
+            </li>
+            <li>Live maintenance during festival event</li>
+            <li>eCommerce and SEO with nextjs</li>
+            <li>
+              Developed APIs with higher security to protect sensitive data.
+            </li>
+            <li>
+              Implemented Continuous integration /Continuous delivery (CI/CD)
+            </li>
+            <li>Improved the performance to reduce time execute function.</li>
+            <li>
+              Analyzed requirements and designed ER diagrams and Sequence
+              diagrams
+            </li>
+          </ul>
         </TimelineBody>
       </TimelineItem>
       <TimelineItem>

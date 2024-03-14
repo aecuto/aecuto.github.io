@@ -64,7 +64,7 @@ export function Skills() {
       <div className="flex flex-wrap gap-4 justify-center">
         {data.map(({ label, value }) => (
           <div key={label}>
-            <Card className="w-[360px] h-[360px] bg-white/20">
+            <Card className="w-[360px] h-[340px] bg-white/20">
               <CardBody>
                 <Typography variant="h5" className="mb-2 text-white">
                   {label}
