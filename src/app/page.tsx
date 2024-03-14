@@ -38,6 +38,18 @@ export default function Home() {
         </div>
       </div>
 
+      <div className="mt-16">
+        <div className="mx-auto max-w-3xl">
+          <Typography variant="h3" className="italic mb-3">
+            LANGUAGES
+          </Typography>
+          <Typography className="text-blue-600">
+            English (Not fluently but can communicate)
+          </Typography>
+          <Typography className="text-blue-200">Thai (Native)</Typography>
+        </div>
+      </div>
+
       <div className="break-after-page" />
 
       <div className="mt-16">
@@ -66,6 +78,20 @@ export default function Home() {
             Educations
           </Typography>
           <Education />
+        </div>
+      </div>
+
+      <div className="mt-16">
+        <div className="mx-auto max-w-3xl text-center">
+          <Typography variant="h4" className="mb-3">
+            hobby sites
+          </Typography>
+          <Typography className="text-red-400">
+            https://doo-anime.vercel.app
+          </Typography>
+          <Typography className="text-red-400">
+            https://aecuto.github.io/oxford-words
+          </Typography>
         </div>
       </div>
 
