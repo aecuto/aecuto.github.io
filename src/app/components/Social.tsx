@@ -6,6 +6,7 @@ import {
   faFacebook,
   faTwitter,
   faTwitch,
+  faLinkedin,
 } from "@fortawesome/free-brands-svg-icons";
 
 export const Social = () => {
@@ -13,11 +14,17 @@ export const Social = () => {
     <div>
       <IconButton
         variant="text"
-        onClick={() =>
-          window.open("https://github.com/aecuto/resume", "_target")
-        }
+        onClick={() => window.open("https://github.com/aecuto", "_target")}
       >
         <FontAwesomeIcon icon={faGithub} size="xl" color="white" />
+      </IconButton>
+      <IconButton
+        variant="text"
+        onClick={() =>
+          window.open("https://www.linkedin.com/in/aecuto/", "_target")
+        }
+      >
+        <FontAwesomeIcon icon={faLinkedin} size="xl" color="white" />
       </IconButton>
       <IconButton
         variant="text"

@@ -22,6 +22,12 @@ export default function Home() {
             </Typography>
           </div>
 
+          <div className="mt-16">
+            <div className="mx-auto max-w-3xl text-center">
+              <Social />
+            </div>
+          </div>
+
           <Typography variant="h1" className="italic mb-3">
             About
           </Typography>
@@ -92,12 +98,6 @@ export default function Home() {
           <Typography className="text-red-400">
             https://aecuto.github.io/oxford-words
           </Typography>
-        </div>
-      </div>
-
-      <div className="mt-16">
-        <div className="mx-auto max-w-3xl text-center">
-          <Social />
         </div>
       </div>
     </>
