@@ -1,10 +1,10 @@
-This is my resume: [https://aecuto.github.io/resume/](https://aecuto.github.io/resume/) 
+This is my resume: [https://aecuto.github.io/resume/](https://aecuto.github.io) 
 
 ## Libary
 
 - nextJs
 - tailwind css
-- naterial taukwind
+- material tailwind
 - font awsome
 - tech icnos
 - deploy to github pages
